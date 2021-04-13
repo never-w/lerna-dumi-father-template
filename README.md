@@ -27,7 +27,7 @@ lerna create @fruits-chain/hooks
 
 ### 添加依赖
 
-```
+```bash
 ## 对某个库添加第三方依赖
 ## 似乎只能安装一个一个添加
 ## @fruits-chain/hooks 即 packages 文件夹内某个 package.json 的 name 值
