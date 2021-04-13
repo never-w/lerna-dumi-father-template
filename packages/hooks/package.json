@@ -1,0 +1,40 @@
+{
+  "name": "@fruits-chain/hooks",
+  "version": "0.1.0",
+  "description": "React 一些常用的 hooks 集合",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hjfruit/hooks.git"
+  },
+  "authors": [
+    "LING_ZI_QING <onlylingstudio@gmail.com>"
+  ],
+  "bugs": {
+    "url": "https://github.com/hjfruit/hooks/issues"
+  },
+  "homepage": "https://github.com/hjfruit/hooks",
+  "license": "ISC",
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "types": "es/index.d.ts",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib",
+    "es",
+    "README.md"
+  ],
+  "devDependencies": {
+    "@types/shallowequal": "^1.1.1"
+  },
+  "dependencies": {
+    "fast-deep-equal": "^3.1.3",
+    "shallowequal": "^1.1.0"
+  },
+  "peerDependencies": {
+    "@types/react": "^17.0.3",
+    "react": "^17.0.2"
+  }
+}

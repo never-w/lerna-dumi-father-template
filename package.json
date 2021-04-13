@@ -1,0 +1,62 @@
+{
+  "name": "root",
+  "private": true,
+  "scripts": {
+    "bootstrap": "lerna bootstrap",
+    "clean": "lerna clean --yes",
+    "publish": "lerna publish",
+    "build": "father-build",
+    "dev": "dumi dev",
+    "test": "jest",
+    "test-c": "jest --coverage",
+    "lint": "eslint packages --fix --ext .ts",
+    "prettier": "prettier --write 'packages/**/*.{js,json,yml,yaml,css,scss,less,ts,tsx,md}'",
+    "precommit": "lint-staged",
+    "commit": "npx git-cz"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^12.1.1",
+    "@testing-library/react-hooks": "^5.1.1",
+    "@types/jest": "^26.0.22",
+    "@umijs/fabric": "^2.5.7",
+    "commitizen": "^4.2.3",
+    "commitlint-config-cz": "^0.13.2",
+    "cz-conventional-changelog": "^3.3.0",
+    "dumi": "^1.1.12",
+    "eslint": "^7.24.0",
+    "father-build": "^1.19.3",
+    "husky": "^6.0.0",
+    "jest": "^26.6.3",
+    "lerna": "^4.0.0",
+    "lint-staged": "^10.5.4",
+    "prettier": "^2.2.1",
+    "react-test-renderer": "^17.0.2",
+    "ts-jest": "^26.5.4",
+    "typescript": "^4.2.4"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "packages/**.{yml,yaml,css,scss,less,md}": [
+      "prettier --write",
+      "git add"
+    ],
+    "packages/**.{js,jsx,json,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
