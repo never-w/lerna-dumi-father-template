@@ -1,8 +1,8 @@
 import { useCallback, useEffect, useRef } from 'react';
 
-import useOriginalDeepCopy from './previous-value/use-original-deep-copy';
-import useState from './use-state';
-import * as helper from './helpers';
+import useOriginalDeepCopy from '../use-original-deep-copy';
+import useState from '../use-state';
+import * as helper from '../helpers';
 
 /**
  * 接口约定的基本参数

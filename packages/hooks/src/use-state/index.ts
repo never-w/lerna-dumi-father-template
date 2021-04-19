@@ -1,7 +1,7 @@
 import { useState, useCallback } from 'react';
 
-import * as isType from './helpers/typeof';
-import useDestroyed from './use-destroyed';
+import * as isType from '../helpers/typeof';
+import useDestroyed from '../use-destroyed';
 
 type UpdateStateParam<T> = Partial<T> | ((s: T) => T);
 

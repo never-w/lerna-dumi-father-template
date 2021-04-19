@@ -1,6 +1,6 @@
 import { renderHook } from '@testing-library/react-hooks';
 
-import useDestroyed from '../src/use-destroyed';
+import useDestroyed from '../';
 
 describe('useDestroyed', () => {
   test('test mount', () => {
