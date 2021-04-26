@@ -25,7 +25,7 @@ React 自带的 `useState` 优化版本，`useState` 原本每次都要给一个
 
 ```tsx | pure
 import React, { useEffect } from 'react';
-import { useState } from '@fruits-chain/hooks/src';
+import { useState } from '@fruits-chain/hooks';
 
 interface LocalState {
   a: number;
