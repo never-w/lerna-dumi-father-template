@@ -8,6 +8,7 @@
     "build": "father-build",
     "dev": "dumi dev",
     "test": "jest",
+    "test-s": "jest packages/hooks-web/src/use-document-event/__tests__",
     "test-c": "jest --coverage",
     "lint": "eslint packages --fix --ext .ts",
     "prettier": "prettier --write 'packages/**/*.{js,json,yml,yaml,css,scss,less,ts,tsx,md}'",
@@ -17,6 +18,7 @@
   },
   "devDependencies": {
     "@commitlint/cli": "^12.1.1",
+    "@testing-library/react": "^11.2.6",
     "@testing-library/react-hooks": "^5.1.2",
     "@types/jest": "^26.0.22",
     "@typescript-eslint/eslint-plugin": "^4.22.0",
