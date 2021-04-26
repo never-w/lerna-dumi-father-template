@@ -40,3 +40,4 @@ lerna add father-build --scope=@fruits-chain/hooks --dev
 ## 参考仓库
 
 - [antd-mobile-plus](https://github.com/alitajs/antd-mobile-plus) 这是一个使用 antd-mobile@3 中的规范，从新规划的基于 antd-mobile@2 组件的基础上开发的业务组件
+- [lerna-learning](https://github.com/morrain/lerna-learning)

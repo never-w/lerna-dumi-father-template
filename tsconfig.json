@@ -12,7 +12,10 @@
     "noImplicitReturns": true,
     "suppressImplicitAnyIndexErrors": true,
     "declaration": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "paths": {
+      "@fruits-chain/*": ["./packages/*"]
+    }
   },
   "include": ["packages/**/*.ts"],
   "exclude": ["node_modules", "**/*.spec.ts", "**/*.test.ts"]

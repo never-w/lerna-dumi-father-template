@@ -7,7 +7,7 @@ export default defineConfig({
   chainWebpack(memo: WebpackChain) {
     memo.plugins.delete('copy');
   },
-  title: '@fruits-chain/hooks',
+  title: 'FruitsChainHooks',
   mode: 'site',
   outputPath: 'docs-dist',
   hash: true,
@@ -20,7 +20,7 @@ export default defineConfig({
     null,
     {
       title: 'GitHub',
-      path: 'https://github.com/onlyling/xant',
+      path: 'https://github.com/hjfruit/hooks',
     },
   ],
 });

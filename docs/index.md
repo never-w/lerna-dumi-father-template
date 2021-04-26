@@ -2,7 +2,7 @@
 title: fruits-chain/hooks - React 一些常用的 hooks 集合
 order: 1
 hero:
-  title: fruits-chain/hooks
+  title: FruitsChainHooks
   desc: 📖 React 一些常用的 hooks 集合
   actions:
     - text: 快速上手
