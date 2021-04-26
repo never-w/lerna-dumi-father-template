@@ -36,7 +36,7 @@ const Demo: React.FC = () => {
       <p>
         <span
           onClick={() => {
-            setState({a: 0});
+            setState({ a: 0 });
           }}
         >
           reset a -&gt; 0
@@ -46,7 +46,7 @@ const Demo: React.FC = () => {
       <p>
         <span
           onClick={() => {
-            setState({b: 0});
+            setState({ b: 0 });
           }}
         >
           reset b -&gt; 0
