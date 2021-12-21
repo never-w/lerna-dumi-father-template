@@ -13,8 +13,9 @@
     "suppressImplicitAnyIndexErrors": true,
     "declaration": true,
     "skipLibCheck": true,
+    "baseUrl": "./",
     "paths": {
-      "@fruits-chain/*": ["./packages/*"]
+      "@fruits-chain/hooks": ["./packages/hooks/src"],
     }
   },
   "include": ["packages/**/*.ts", "packages/**/*.tsx"],

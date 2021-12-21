@@ -28,5 +28,8 @@
   },
   "bugs": {
     "url": "https://github.com/hjfruit/hooks/issues"
+  },
+  "dependencies": {
+    "@fruits-chain/hooks": "^0.1.0"
   }
 }

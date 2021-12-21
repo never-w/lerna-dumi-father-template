@@ -24,37 +24,37 @@ React 自带的 `useState` 优化版本，`useState` 原本每次都要给一个
 ## 使用说明
 
 ```tsx | pure
-import React, { useEffect } from 'react';
-import { useState } from '@fruits-chain/hooks';
+import React, { useEffect } from 'react'
+import { useState } from '@fruits-chain/hooks'
 
 interface LocalState {
-  a: number;
-  b: number;
+  a: number
+  b: number
 }
 
 const Demo: React.FC = () => {
-  const [state, setState] = useState<LocalState>({ a: 0, b: 0 });
+  const [state, setState] = useState<LocalState>({ a: 0, b: 0 })
 
   const onClickATo2 = () => {
     setState({
       a: 2,
-    });
-  };
+    })
+  }
 
   const onClickAAcc = () => {
-    setState((s) => ({
+    setState(s => ({
       a: s.a + 1,
-    }));
-  };
+    }))
+  }
 
   useEffect(() => {
     setState({
       a: 100,
-    });
-  }, []);
+    })
+  }, [])
 
-  return <div>Demo -&gt; {state.a}</div>;
-};
+  return <div>Demo -&gt; {state.a}</div>
+}
 ```
 
 ## DEMO

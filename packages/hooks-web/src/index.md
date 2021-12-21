@@ -12,10 +12,10 @@ group:
 # 使用说明
 
 ```tsx | pure
-import { useXxx } from '@fruits-chain/hooks-web';
+import { useXxx } from '@fruits-chain/hooks-web'
 
 const Demo = () => {
-  const [] = useXxx();
-  return <div>Demo</div>;
-};
+  const [] = useXxx()
+  return <div>Demo</div>
+}
 ```

@@ -1,4 +1,4 @@
 module.exports = {
   root: true,
-  extends: 'react-app',
+  extends: ['@fruits-chain/eslint-config-preset'],
 };
