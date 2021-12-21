@@ -1,7 +1,8 @@
 import { useCallback, useEffect, useRef } from 'react'
 
-import useOriginalDeepCopy from '../use-original-deep-copy'
-import useState from '../use-state'
+import useOriginalDeepCopy from '../useOriginalDeepCopy'
+import useState from '../useState'
+import usePersistFn from '../usePersistFn'
 import * as helper from '../helpers'
 
 /**
@@ -37,7 +38,7 @@ const defaultOption = {
  */
 const useAPI = <T, PT = Record<string, any>>(
   initValue: T,
-  fetchAPI: (p?: any) => Promise<BaseResponse<T>>,
+  request: (p?: any) => Promise<BaseResponse<T>>,
   option: UseAPIOption<PT> = defaultOption as UseAPIOption<PT>,
 ) => {
   /** 是否手动执行 */
@@ -45,7 +46,7 @@ const useAPI = <T, PT = Record<string, any>>(
 
   /** 自动执行的可变参数 */
   const defaultParams = useOriginalDeepCopy(option.defaultParams)
-
+  const requestPersistFn = usePersistFn(request)
   const fetchTime = useRef(0)
 
   const [localState, setLocalState] = useState<LocalState<T>>({
@@ -65,7 +66,7 @@ const useAPI = <T, PT = Record<string, any>>(
       fetchTime.current = time
 
       return new Promise((resolve, reject) => {
-        fetchAPI(p)
+        requestPersistFn(p)
           .then(({ data }) => {
             if (fetchTime.current === time) {
               setLocalState({
@@ -89,7 +90,7 @@ const useAPI = <T, PT = Record<string, any>>(
           })
       })
     },
-    [fetchAPI],
+    [requestPersistFn],
   )
 
   useEffect(() => {

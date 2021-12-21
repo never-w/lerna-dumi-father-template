@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { render, fireEvent, screen } from '@testing-library/react'
 
-import useDocumentEvent from '../'
+import useDocumentEvent from '..'
 
 const Foo: React.FC<{
   onClick?: any

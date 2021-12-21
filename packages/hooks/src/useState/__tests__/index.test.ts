@@ -1,6 +1,6 @@
 import { renderHook, act } from '@testing-library/react-hooks'
 
-import useState from '../'
+import useState from '..'
 
 describe('useState', () => {
   test('test string', () => {

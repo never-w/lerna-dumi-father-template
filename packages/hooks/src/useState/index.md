@@ -21,42 +21,6 @@ React 自带的 `useState` 优化版本，`useState` 原本每次都要给一个
 
 > 详情：[eslint-plugin-react-hooks](https://github.com/facebook/react/blob/master/packages/eslint-plugin-react-hooks/src/ExhaustiveDeps.js#L150)
 
-## 使用说明
-
-```tsx | pure
-import React, { useEffect } from 'react'
-import { useState } from '@fruits-chain/hooks'
-
-interface LocalState {
-  a: number
-  b: number
-}
-
-const Demo: React.FC = () => {
-  const [state, setState] = useState<LocalState>({ a: 0, b: 0 })
-
-  const onClickATo2 = () => {
-    setState({
-      a: 2,
-    })
-  }
-
-  const onClickAAcc = () => {
-    setState(s => ({
-      a: s.a + 1,
-    }))
-  }
-
-  useEffect(() => {
-    setState({
-      a: 100,
-    })
-  }, [])
-
-  return <div>Demo -&gt; {state.a}</div>
-}
-```
-
 ## DEMO
 
 <code src="./demo.tsx"></code>

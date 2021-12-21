@@ -1,10 +1,10 @@
 import { renderHook } from '@testing-library/react-hooks'
 
-import useOriginalCopy from '../'
+import useOriginalDeepCopy from '..'
 
-describe('useOriginalCopy', () => {
+describe('previous-value -> useOriginalDeepCopy', () => {
   test('test number', () => {
-    const { result } = renderHook(() => useOriginalCopy(1))
+    const { result } = renderHook(() => useOriginalDeepCopy(1))
 
     expect(result.current).toBe(1)
   })
@@ -12,7 +12,7 @@ describe('useOriginalCopy', () => {
   test('test object shallowequal', () => {
     let data = { a: 1 }
     const data2 = data
-    const { result, rerender } = renderHook(() => useOriginalCopy(data))
+    const { result, rerender } = renderHook(() => useOriginalDeepCopy(data))
 
     data = { a: 1 }
     rerender()
@@ -23,7 +23,7 @@ describe('useOriginalCopy', () => {
   test('test object update', () => {
     let data = { a: 1 }
     const data2 = data
-    const { result, rerender } = renderHook(() => useOriginalCopy(data))
+    const { result, rerender } = renderHook(() => useOriginalDeepCopy(data))
 
     data = { a: 2 }
     rerender()
@@ -31,14 +31,14 @@ describe('useOriginalCopy', () => {
     expect(result.current).not.toBe(data2)
   })
 
-  test('test object shallowequal2', () => {
+  test('test object deepEquals', () => {
     let data = { a: { a: 1 } }
     const data2 = data
-    const { result, rerender } = renderHook(() => useOriginalCopy(data))
+    const { result, rerender } = renderHook(() => useOriginalDeepCopy(data))
 
     data = { a: { a: 1 } }
     rerender()
 
-    expect(result.current).not.toBe(data2)
+    expect(result.current).toBe(data2)
   })
 })

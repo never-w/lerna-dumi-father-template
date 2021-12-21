@@ -1,6 +1,6 @@
 import deepEquals from 'fast-deep-equal'
 
-import useOriginalCopy from '../use-original-copy'
+import useOriginalCopy from '../useOriginalCopy'
 
 /**
  * 深度复制、对比一个数据
