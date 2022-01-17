@@ -1,11 +1,11 @@
-import type WebpackChain from 'webpack-chain';
-import { defineConfig } from 'dumi';
+import type WebpackChain from 'webpack-chain'
+import { defineConfig } from 'dumi'
 
-const repo = 'hooks';
+const repo = 'hooks'
 
 export default defineConfig({
   chainWebpack(memo: WebpackChain) {
-    memo.plugins.delete('copy');
+    memo.plugins.delete('copy')
   },
   title: 'Fruits Chain Hooks',
   mode: 'site',
@@ -23,4 +23,4 @@ export default defineConfig({
       path: 'https://github.com/hjfruit/hooks',
     },
   ],
-});
+})
